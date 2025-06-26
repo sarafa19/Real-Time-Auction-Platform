@@ -3,7 +3,7 @@ An interactive auction system where users can create auctions, place bids in rea
 
 ## Microservices Overview
 
-# 1. User Service
+## 1. User Service
 Handles registration, login, and user profiles
 Issues JWT tokens upon login
 Endpoints:
