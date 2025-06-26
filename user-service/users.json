@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1750939797754",
+    "name": "Pierre Curie",
+    "email": "pierre@example.com",
+    "password": "$2b$10$/dEL4WITaN3Ep.9pguzhZen1smNvTNqqSw.THPNUzGeymGXXux3Xu"
+  },
+  {
+    "id": "1750940605425",
+    "name": "Pierre Curie",
+    "email": "pierre@example.com",
+    "password": "$2b$10$bfBaIOHw03DPZ4fNwXS77uTCa20QRxWvKUXD//Y8FjiaNbU6RaNuu"
+  },
+  {
+    "id": "1750945712140",
+    "name": "Alice",
+    "email": "alice@example.com",
+    "password_hash": "$2b$10$WLa7aCynKAkLLVtnAASp3.XA/.2FoIK4dNGanUQRCR8efoQCUx.7W"
+  },
+  {
+    "id": "1750951976024",
+    "name": "Alice",
+    "email": "sarah@example.com",
+    "password_hash": "$2b$10$YtvZ32rcyjzklB8qvy7NiuJk/HM6OzDIOI/N5avAeYCnEyZPjK002"
+  }
+]

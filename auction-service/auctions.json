@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1750941043785",
+    "title": "Microscope ancien",
+    "description": "Mod�le des ann�es 1900",
+    "starting_price": 300,
+    "ends_at": "2025-12-31T23:59:59Z",
+    "status": "pending",
+    "current_price": 300
+  },
+  {
+    "id": "1750945792868",
+    "title": "iPhone 15",
+    "description": "Nouveau smartphone",
+    "starting_price": 999,
+    "owner_id": "1",
+    "current_price": 999,
+    "status": "pending",
+    "ends_at": "2025-06-27T13:49:52.868Z"
+  },
+  {
+    "id": "1750952025385",
+    "title": "iPhone 15",
+    "description": "Nouveau smartphone",
+    "starting_price": 999,
+    "owner_id": "1",
+    "current_price": 999,
+    "status": "pending",
+    "ends_at": "2025-06-27T15:33:45.385Z"
+  }
+]

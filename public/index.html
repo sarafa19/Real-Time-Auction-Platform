@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auction Platform</title>
+  <style>
+    #auctions { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+    .bid { margin: 5px 0; padding: 5px; background: #f5f5f5; }
+  </style>
+</head>
+<body>
+  <h1>Live Auction</h1>
+  <div id="auctions">En attente de connexion WebSocket...</div>
+  
+  <script>
+    const ws = new WebSocket('ws://localhost:8080');
+    const auctionsDiv = document.getElementById('auctions');
+    
+    // Debug complet
+    ws.onopen = () => {
+      console.log(' Connecté au serveur WebSocket');
+      document.getElementById('auctions').innerHTML = '<div class="bid">Prêt à recevoir des mises à jour...</div>';
+    };
+    
+    ws.onerror = (error) => {
+      console.error(' Erreur WebSocket:', error);
+      document.getElementById('auctions').innerHTML = 
+        `<div class="bid" style="color:red">Erreur de connexion WebSocket. Vérifiez la console (F12)</div>`;
+    };
+    
+    ws.onmessage = (event) => {
+      console.log(' Message reçu:', event.data);
+      try {
+        const data = JSON.parse(event.data);
+        console.log('Reçu:', data);
+        const bidDiv = document.createElement('div');
+        bidDiv.className = 'bid';
+        bidDiv.innerHTML = `
+          <strong>Nouvelle offre</strong>: $${data.bid.amount} 
+          <br>Enchère ID: ${data.bid.auction_id}
+          <br>Par utilisateur: ${data.bid.user_id}
+          <small>à ${new Date().toLocaleTimeString()}</small>
+        `;
+        document.getElementById('auctions').prepend(bidDiv);
+      } catch (e) {
+        console.error('Erreur de parsing:', e);
+      }
+    };
+  </script>
+</body>
+</html>
