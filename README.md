@@ -2,7 +2,8 @@
 An interactive auction system where users can create auctions, place bids in real-time, and receive live updates. The platform demonstrates real-world microservices integration using REST APIs, WebSockets, JWT authentication, and webhooks.
 
 ## Microservices Overview
-#1. User Service
+
+# 1. User Service
 Handles registration, login, and user profiles
 Issues JWT tokens upon login
 Endpoints:
